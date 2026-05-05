@@ -11,10 +11,10 @@ function displayHabits() {
 
   habitList.innerHTML = "";
 
-habits.forEach(function (habit, index) {
-  const habitCard = document.createElement("div");
+  habits.forEach(function (habit, index) {
+    const habitCard = document.createElement("div");
 
-  habitCard.innerHTML = `
+    habitCard.innerHTML = `
         <h3>${habit.name}</h3>
         <p>Category: ${habit.category}</p>
         <p>Goal: ${habit.goal}</p>
@@ -23,8 +23,8 @@ habits.forEach(function (habit, index) {
         <button onclick="deleteHabit(${index})">Delete</button>
     `;
 
-  habitList.appendChild(habitCard);
-});
+    habitList.appendChild(habitCard);
+  });
 }
 
 if (habitForm) {
@@ -82,4 +82,20 @@ function deleteHabit(index) {
 
   displayHabits();
 }
+
+const totalHabits = document.querySelector("#totalHabits");
+const completedHabits = document.querySelector("#completedHabits");
+
+if (totalHabits && completedHabits) {
+  let habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+  totalHabits.textContent = "Total habits: " + habits.length;
+
+  let completed = habits.filter(function (habit) {
+    return habit.completed === true;
+  });
+
+  completedHabits.textContent = "Completed habits: " + completed.length;
+}
+
 
