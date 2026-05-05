@@ -43,11 +43,11 @@ if (habitForm) {
   habitForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const habitName = document.querySelector("#habitName").value;
+    const habitName = document.querySelector("#habitName").value.trim();
     const habitCategory = document.querySelector("#habitCategory").value;
     const habitFrequency = document.querySelector("#habitFrequency").value;
     const habitPriority = document.querySelector("#habitPriority").value;
-    const habitGoal = document.querySelector("#habitGoal").value;
+    const habitGoal = document.querySelector("#habitGoal").value.trim();
 
 if (
   habitName === "" ||
