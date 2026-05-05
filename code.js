@@ -11,17 +11,20 @@ function displayHabits() {
 
   habitList.innerHTML = "";
 
-  habits.forEach(function (habit) {
-    const habitCard = document.createElement("div");
+habits.forEach(function (habit, index) {
+  const habitCard = document.createElement("div");
 
-    habitCard.innerHTML = `
-            <h3>${habit.name}</h3>
-            <p>Category: ${habit.category}</p>
-            <p>Goal: ${habit.goal}</p>
-        `;
+  habitCard.innerHTML = `
+        <h3>${habit.name}</h3>
+        <p>Category: ${habit.category}</p>
+        <p>Goal: ${habit.goal}</p>
+        <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
+        <button onclick="completeHabit(${index})">Complete</button>
+        <button onclick="deleteHabit(${index})">Delete</button>
+    `;
 
-    habitList.appendChild(habitCard);
-  });
+  habitList.appendChild(habitCard);
+});
 }
 
 if (habitForm) {
@@ -59,3 +62,24 @@ if (habitForm) {
 }
 
 displayHabits();
+
+function completeHabit(index) {
+  let habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+  habits[index].completed = true;
+
+  localStorage.setItem("habits", JSON.stringify(habits));
+
+  displayHabits();
+}
+
+function deleteHabit(index) {
+  let habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+  habits.splice(index, 1);
+
+  localStorage.setItem("habits", JSON.stringify(habits));
+
+  displayHabits();
+}
+
