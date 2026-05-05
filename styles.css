@@ -57,5 +57,21 @@ p {
     margin-bottom: 12px;
 }
 
+button,
+main a {
+    display: inline-block;
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 14px rgba(236, 72, 153, 0.25);
+}
 
+button:hover,
+main a:hover {
+    background: linear-gradient(135deg, #db2777, #ec4899);
+}
 
