@@ -1,41 +1,59 @@
-# Pink Habits
+# 🌸 Pink Habits
 
-## Live Site
+## 🔗 Live Demo
 https://imaanally.github.io/Personal-Habit-Tracker/
 
-## Repository
+## 📂 Repository
 https://github.com/imaanally/Personal-Habit-Tracker
 
+---
 
-## Project Description
-Pink Habits is a personal habit tracker web application that helps users create, view, and manage their habits. The app is designed to support consistency by allowing users to track habits, mark them as completed, and store progress in the browser.
+## 🧠 Project Overview
+Pink Habits is a clean and user-friendly habit tracking web application designed to help users build consistency in their daily routines. The app allows users to create habits, track progress, and stay accountable over time.
 
-## Problem Statement
-Many students struggle to stay consistent with daily habits because they forget their goals or do not have a simple way to track progress.
+---
 
-## Solution
-Pink Habits solves this problem by giving users a simple and pretty habit tracking system. Users can add habits, choose a category, set a frequency, assign a priority, and save everything using localStorage.
+## 🚩 Problem Statement
+Many students struggle to maintain consistency with daily habits due to a lack of simple and accessible tracking tools. Without a clear system, it becomes easy to forget goals and lose motivation.
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- Git and GitHub
+---
 
-## Features
-- Add new habits
-- Form validation
-- Save habits to localStorage
-- Display saved habits
-- Mark habits as completed
-- Delete habits
-- Clear all habits
-- View progress on the homepage
-- Random habit tips on the about page
-- Responsive design
+## 💡 Solution
+Pink Habits provides a simple and visually appealing solution by allowing users to:
+- Add and manage habits
+- Track completion status
+- View progress in real-time
+- Store data persistently using localStorage
 
-## Known Bugs
-No known bugs at the moment.
+---
 
-## Author
-Imaan
+## 🛠️ Technologies Used
+- HTML (Semantic Structure)
+- CSS (Responsive Design + Styling)
+- JavaScript (DOM Manipulation & Logic)
+- Git & GitHub (Version Control)
+
+---
+
+## ✨ Features
+- Add new habits with category, frequency, and priority
+- Form validation with feedback messages
+- Persistent storage using localStorage
+- Dynamic display of habits
+- Mark habits as complete or undo completion
+- Delete individual habits
+- Clear all habits with confirmation
+- Homepage progress tracking with progress bar
+- Random motivational tips on the About page
+- Responsive design for mobile and desktop
+
+---
+
+## ⚠️ Known Limitations
+- Habit completion is tracked as a single state (not per date)
+- No user authentication (single-user local app)
+
+---
+
+## 👤 Author
+**Imaan**
