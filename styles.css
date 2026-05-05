@@ -229,3 +229,28 @@ nav a.active {
 .hero p {
     font-size: 18px;
 }
+
+section,
+.habit-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover,
+.habit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(236, 72, 153, 0.18);
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+#clearHabitsBtn {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #be123c, #fb7185);
+}
