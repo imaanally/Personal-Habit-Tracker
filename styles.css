@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff0f6, #fce7f3, #fdf2f8);
+    color: #4a1d35;
+    line-height: 1.6;
+}
+
+
+
+
