@@ -31,6 +31,7 @@ function displayHabits() {
       <p>Frequency: ${habit.frequency}</p>
       <p>Priority: ${habit.priority}</p>
       <p>Goal: ${habit.goal}</p>
+      <p>Created: ${habit.dateCreated}</p>
       <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
       <button onclick="completeHabit(${index})">Complete</button>
       <button onclick="deleteHabit(${index})">Delete</button>
@@ -69,6 +70,7 @@ if (habitForm) {
       priority: habitPriority,
       goal: habitGoal,
       completed: false,
+      dateCreated: new Date().toLocaleDateString(),
     };
 
     let habits = JSON.parse(localStorage.getItem("habits")) || [];
