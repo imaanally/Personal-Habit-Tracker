@@ -49,9 +49,8 @@ Pink Habits provides a simple and visually appealing solution by allowing users 
 
 ---
 
-## ⚠️ Known Limitations
-- Habit completion is tracked as a single state (not per date)
-- No user authentication (single-user local app)
+## ⚠️ Known Bugs
+- No major bugs found at the moment.
 
 ---
 
