@@ -126,4 +126,11 @@ if (tipButton && dailyTip) {
   });
 }
 
+const clearHabitsBtn = document.querySelector("#clearHabitsBtn");
 
+if (clearHabitsBtn) {
+  clearHabitsBtn.addEventListener("click", function () {
+    localStorage.removeItem("habits");
+    displayHabits();
+  });
+}
