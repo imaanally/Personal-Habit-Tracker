@@ -158,3 +158,8 @@ footer {
     background: linear-gradient(135deg, #ec4899, #f472b6);
     border-radius: 999px;
 }
+
+.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
