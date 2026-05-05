@@ -140,7 +140,16 @@ const dailyTip = document.querySelector("#dailyTip");
 
 if (tipButton && dailyTip) {
   tipButton.addEventListener("click", function () {
-    dailyTip.textContent = "Small daily actions become big results over time.";
+    const tips = [
+      "Small daily actions become big results over time.",
+      "Consistency matters more than perfection.",
+      "Track progress, not just results.",
+      "Missing one day is not failure. Just return the next day.",
+    ];
+
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+
+    dailyTip.textContent = randomTip;
   });
 }
 
