@@ -27,7 +27,7 @@ function displayHabits() {
 
     habitCard.innerHTML = `
       <h3>${habit.name}</h3>
-      <p>Category: ${habit.category}</p>
+      <p><span class="badge">${habit.category}</span></p>
       <p>Frequency: ${habit.frequency}</p>
       <p>Priority: ${habit.priority}</p>
       <p>Goal: ${habit.goal}</p>
