@@ -124,3 +124,22 @@ footer {
         margin-top: 8px;
     }
 }
+
+#habitList div {
+    background-color: #fff7fb;
+    border: 1px solid #fbcfe8;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 14px rgba(236, 72, 153, 0.12);
+}
+
+#habitList h3 {
+    color: #be185d;
+}
+
+#habitList button {
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
