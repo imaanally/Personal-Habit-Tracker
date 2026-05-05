@@ -1,10 +1,6 @@
-// Get the form from the habits page
 const habitForm = document.querySelector("#habitForm");
-
-// Get the message paragraph
 const formMessage = document.querySelector("#formMessage");
 
-// Only run this code if the form exists on the page
 if (habitForm) {
   habitForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -18,6 +14,23 @@ if (habitForm) {
       return;
     }
 
-    formMessage.textContent = "Habit added successfully!";
+    const habit = {
+      name: habitName,
+      category: habitCategory,
+      goal: habitGoal,
+      completed: false,
+    };
+
+    let habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+    habits.push(habit);
+
+    localStorage.setItem("habits", JSON.stringify(habits));
+
+    formMessage.textContent = "Habit saved successfully!";
+
+    habitForm.reset();
   });
 }
+
+
