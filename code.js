@@ -1,5 +1,28 @@
 const habitForm = document.querySelector("#habitForm");
 const formMessage = document.querySelector("#formMessage");
+const habitList = document.querySelector("#habitList");
+
+function displayHabits() {
+  if (!habitList) {
+    return;
+  }
+
+  let habits = JSON.parse(localStorage.getItem("habits")) || [];
+
+  habitList.innerHTML = "";
+
+  habits.forEach(function (habit) {
+    const habitCard = document.createElement("div");
+
+    habitCard.innerHTML = `
+            <h3>${habit.name}</h3>
+            <p>Category: ${habit.category}</p>
+            <p>Goal: ${habit.goal}</p>
+        `;
+
+    habitList.appendChild(habitCard);
+  });
+}
 
 if (habitForm) {
   habitForm.addEventListener("submit", function (event) {
@@ -30,7 +53,9 @@ if (habitForm) {
     formMessage.textContent = "Habit saved successfully!";
 
     habitForm.reset();
+
+    displayHabits();
   });
 }
 
-
+displayHabits();
