@@ -130,7 +130,13 @@ const clearHabitsBtn = document.querySelector("#clearHabitsBtn");
 
 if (clearHabitsBtn) {
   clearHabitsBtn.addEventListener("click", function () {
-    localStorage.removeItem("habits");
-    displayHabits();
+    const confirmClear = confirm("Are you sure you want to clear all habits?");
+
+    if (confirmClear === true) {
+      localStorage.removeItem("habits");
+      displayHabits();
+    }
   });
 }
+
+
