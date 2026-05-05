@@ -1,6 +1,6 @@
 # 🌸 Pink Habits
 
-## 🔗 Live Demo
+## 🔗 Live Site
 https://imaanally.github.io/Personal-Habit-Tracker/
 
 ## 📂 Repository
