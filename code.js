@@ -10,6 +10,11 @@ function displayHabits() {
   let habits = JSON.parse(localStorage.getItem("habits")) || [];
 
   habitList.innerHTML = "";
+  if (habits.length === 0) {
+    habitList.innerHTML =
+      "<p>No habits added yet. Start by adding your first habit.</p>";
+    return;
+  }
 
   habits.forEach(function (habit, index) {
     const habitCard = document.createElement("div");
