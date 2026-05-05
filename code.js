@@ -28,6 +28,7 @@ function displayHabits() {
       <h3>${habit.name}</h3>
       <p>Category: ${habit.category}</p>
       <p>Frequency: ${habit.frequency}</p>
+      <p>Priority: ${habit.priority}</p>
       <p>Goal: ${habit.goal}</p>
       <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
       <button onclick="completeHabit(${index})">Complete</button>
@@ -45,22 +46,25 @@ if (habitForm) {
     const habitName = document.querySelector("#habitName").value;
     const habitCategory = document.querySelector("#habitCategory").value;
     const habitFrequency = document.querySelector("#habitFrequency").value;
+    const habitPriority = document.querySelector("#habitPriority").value;
     const habitGoal = document.querySelector("#habitGoal").value;
 
-    if (
-      habitName === "" ||
-      habitCategory === "" ||
-      habitFrequency === "" ||
-      habitGoal === ""
-    ) {
-      formMessage.textContent = "Please fill in all fields.";
-      return;
-    }
+if (
+  habitName === "" ||
+  habitCategory === "" ||
+  habitFrequency === "" ||
+  habitPriority === "" ||
+  habitGoal === ""
+) {
+  formMessage.textContent = "Please fill in all fields.";
+  return;
+}
 
     const habit = {
       name: habitName,
       category: habitCategory,
       frequency: habitFrequency,
+      priority: habitPriority,
       goal: habitGoal,
       completed: false,
     };
