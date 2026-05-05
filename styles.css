@@ -75,3 +75,18 @@ main a:hover {
     background: linear-gradient(135deg, #db2777, #ec4899);
 }
 
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #f9a8d4;
+    border-radius: 12px;
+    background-color: #fff7fb;
+}
+
+label {
+    font-weight: bold;
+    color: #9d174d;
+}
+
