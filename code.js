@@ -29,7 +29,7 @@ function displayHabits() {
       <h3>${habit.name}</h3>
       <p><span class="badge">${habit.category}</span></p>
       <p>Frequency: ${habit.frequency}</p>
-      <p>Priority: ${habit.priority}</p>
+      <p>Priority: <span class="priority-badge">${habit.priority}</span></p>
       <p>Goal: ${habit.goal}</p>
       <p>Created: ${habit.dateCreated}</p>
       <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
