@@ -90,6 +90,9 @@ function deleteHabit(index) {
 
 const totalHabits = document.querySelector("#totalHabits");
 const completedHabits = document.querySelector("#completedHabits");
+const progressBar = document.querySelector("#progressBar");
+const progressText = document.querySelector("#progressText");
+
 
 if (totalHabits && completedHabits) {
   let habits = JSON.parse(localStorage.getItem("habits")) || [];
@@ -101,6 +104,13 @@ if (totalHabits && completedHabits) {
   });
 
   completedHabits.textContent = "Completed habits: " + completed.length;
+
+  let percentage =
+    habits.length === 0 ? 0
+      : Math.round((completed.length / habits.length) * 100);
+
+  progressBar.style.width = percentage + "%";
+  progressText.textContent = percentage + "% complete";
 }
 
 const tipButton = document.querySelector("#tipButton");
