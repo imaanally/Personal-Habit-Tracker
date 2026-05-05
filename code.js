@@ -49,17 +49,17 @@ if (habitForm) {
     const habitPriority = document.querySelector("#habitPriority").value;
     const habitGoal = document.querySelector("#habitGoal").value.trim();
 
-if (
-  habitName === "" ||
-  habitCategory === "" ||
-  habitFrequency === "" ||
-  habitPriority === "" ||
-  habitGoal === ""
-) {
-  formMessage.textContent = "Please fill in all fields.";
-  formMessage.className = "error-message";
-  return;
-}
+    if (
+      habitName === "" ||
+      habitCategory === "" ||
+      habitFrequency === "" ||
+      habitPriority === "" ||
+      habitGoal === ""
+    ) {
+      formMessage.textContent = "Please fill in all fields.";
+      formMessage.className = "error-message";
+      return;
+    }
 
     const habit = {
       name: habitName,
@@ -152,4 +152,11 @@ if (clearHabitsBtn) {
       displayHabits();
     }
   });
+}
+
+const welcomeMessage = document.querySelector("#welcomeMessage");
+
+if (welcomeMessage) {
+  welcomeMessage.textContent =
+    "Today is a fresh chance to build the habits your future self will thank you for.";
 }
