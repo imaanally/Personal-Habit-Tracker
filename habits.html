@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits | Personal Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="habits.html">Habits</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Track Your Habits</h1>
+            <p>Add habits you want to stay consistent with.</p>
+        </section>
+
+        <section>
+            <h2>Add a New Habit</h2>
+
+            <form id="habitForm">
+                <label for="habitName">Habit Name</label>
+                <input type="text" id="habitName" placeholder="e.g. Read Quran">
+
+                <label for="habitCategory">Category</label>
+                <select id="habitCategory">
+                    <option value="">Choose a category</option>
+                    <option value="Quran">Quran</option>
+                    <option value="Study">Study</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Health">Health</option>
+                    <option value="Personal">Personal</option>
+                </select>
+
+                <label for="habitGoal">Goal</label>
+                <input type="text" id="habitGoal" placeholder="e.g. 30 minutes">
+
+                <button type="submit">Add Habit</button>
+            </form>
+
+            <p id="formMessage"></p>
+        </section>
+
+        <section>
+            <h2>My Habits</h2>
+            <div id="habitList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Personal Habit Tracker</p>
+    </footer>
+
+    <script src="code.js"></script>
+</body>
+</html>
