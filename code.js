@@ -57,6 +57,7 @@ if (
   habitGoal === ""
 ) {
   formMessage.textContent = "Please fill in all fields.";
+  formMessage.className = "error-message";
   return;
 }
 
@@ -76,6 +77,7 @@ if (
     localStorage.setItem("habits", JSON.stringify(habits));
 
     formMessage.textContent = "Habit saved successfully!";
+    formMessage.className = "success-message";
 
     habitForm.reset();
 
