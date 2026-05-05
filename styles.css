@@ -11,6 +11,19 @@ body {
     line-height: 1.6;
 }
 
+header {
+    background-color: #fff7fb;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+
 
 
 
