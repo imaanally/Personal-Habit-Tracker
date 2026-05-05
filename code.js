@@ -10,6 +10,7 @@ function displayHabits() {
   let habits = JSON.parse(localStorage.getItem("habits")) || [];
 
   habitList.innerHTML = "";
+
   if (habits.length === 0) {
     habitList.innerHTML =
       "<p>No habits added yet. Start by adding your first habit.</p>";
@@ -24,12 +25,13 @@ function displayHabits() {
     }
 
     habitCard.innerHTML = `
-        <h3>${habit.name}</h3>
-        <p>Category: ${habit.category}</p>
-        <p>Goal: ${habit.goal}</p>
-        <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
-        <button onclick="completeHabit(${index})">Complete</button>
-        <button onclick="deleteHabit(${index})">Delete</button>
+      <h3>${habit.name}</h3>
+      <p>Category: ${habit.category}</p>
+      <p>Frequency: ${habit.frequency}</p>
+      <p>Goal: ${habit.goal}</p>
+      <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
+      <button onclick="completeHabit(${index})">Complete</button>
+      <button onclick="deleteHabit(${index})">Delete</button>
     `;
 
     habitList.appendChild(habitCard);
@@ -42,9 +44,15 @@ if (habitForm) {
 
     const habitName = document.querySelector("#habitName").value;
     const habitCategory = document.querySelector("#habitCategory").value;
+    const habitFrequency = document.querySelector("#habitFrequency").value;
     const habitGoal = document.querySelector("#habitGoal").value;
 
-    if (habitName === "" || habitCategory === "" || habitGoal === "") {
+    if (
+      habitName === "" ||
+      habitCategory === "" ||
+      habitFrequency === "" ||
+      habitGoal === ""
+    ) {
       formMessage.textContent = "Please fill in all fields.";
       return;
     }
@@ -52,6 +60,7 @@ if (habitForm) {
     const habit = {
       name: habitName,
       category: habitCategory,
+      frequency: habitFrequency,
       goal: habitGoal,
       completed: false,
     };
@@ -97,8 +106,7 @@ const completedHabits = document.querySelector("#completedHabits");
 const progressBar = document.querySelector("#progressBar");
 const progressText = document.querySelector("#progressText");
 
-
-if (totalHabits && completedHabits) {
+if (totalHabits && completedHabits && progressBar && progressText) {
   let habits = JSON.parse(localStorage.getItem("habits")) || [];
 
   totalHabits.textContent = "Total habits: " + habits.length;
@@ -110,7 +118,8 @@ if (totalHabits && completedHabits) {
   completedHabits.textContent = "Completed habits: " + completed.length;
 
   let percentage =
-    habits.length === 0 ? 0
+    habits.length === 0
+      ? 0
       : Math.round((completed.length / habits.length) * 100);
 
   progressBar.style.width = percentage + "%";
@@ -138,5 +147,3 @@ if (clearHabitsBtn) {
     }
   });
 }
-
-
