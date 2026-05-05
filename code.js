@@ -19,6 +19,7 @@ function displayHabits() {
 
   habits.forEach(function (habit, index) {
     const habitCard = document.createElement("div");
+    habitCard.classList.add("habit-card");
 
     if (habit.completed === true) {
       habitCard.classList.add("completed");
