@@ -98,4 +98,13 @@ if (totalHabits && completedHabits) {
   completedHabits.textContent = "Completed habits: " + completed.length;
 }
 
+const tipButton = document.querySelector("#tipButton");
+const dailyTip = document.querySelector("#dailyTip");
+
+if (tipButton && dailyTip) {
+  tipButton.addEventListener("click", function () {
+    dailyTip.textContent = "Small daily actions become big results over time.";
+  });
+}
+
 
