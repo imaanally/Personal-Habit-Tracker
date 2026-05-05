@@ -33,7 +33,7 @@ function displayHabits() {
       <p>Goal: ${habit.goal}</p>
       <p>Created: ${habit.dateCreated}</p>
       <p>Status: ${habit.completed ? "Completed" : "Not completed"}</p>
-      <button onclick="completeHabit(${index})">Complete</button>
+      <button onclick="completeHabit(${index})">${habit.completed ? "Undo" : "Complete"}</button>
       <button onclick="deleteHabit(${index})">Delete</button>
     `;
 
@@ -93,7 +93,7 @@ displayHabits();
 function completeHabit(index) {
   let habits = JSON.parse(localStorage.getItem("habits")) || [];
 
-  habits[index].completed = true;
+  habits[index].completed = !habits[index].completed;
 
   localStorage.setItem("habits", JSON.stringify(habits));
 
