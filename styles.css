@@ -180,3 +180,10 @@ footer {
     border-radius: 10px;
     margin-top: 10px;
 }
+
+nav a.active {
+    background-color: #fce7f3;
+    color: #9d174d;
+    padding: 8px 14px;
+    border-radius: 999px;
+}
