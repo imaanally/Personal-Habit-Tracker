@@ -3,6 +3,10 @@
 ## Live Site
 https://imaanally.github.io/Personal-Habit-Tracker/
 
+## Repository
+https://github.com/imaanally/Personal-Habit-Tracker
+
+
 ## Project Description
 Pink Habits is a personal habit tracker web application that helps users create, view, and manage their habits. The app is designed to support consistency by allowing users to track habits, mark them as completed, and store progress in the browser.
 
