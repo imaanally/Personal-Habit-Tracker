@@ -24,35 +24,33 @@ Pink Habits addresses this problem by offering a straightforward habit tracking 
 ---
 
 ## Features
-- Create new habits with name, category, frequency, priority, and goal
-- Validate user input before adding habits
-- Store and retrieve data using localStorage
-- Display all saved habits dynamically
-- Mark habits as completed or undo completion
-- Delete individual habits
-- Clear all habits with a confirmation prompt
-- Display total habits and completed habits on the homepage
-- Visual progress tracking using a progress bar
-- Generate random motivational tips on the about page
-- Responsive layout for different screen sizes
+- Create new habits with name, category, frequency, priority, and goal  
+- Validate user input before adding habits  
+- Store and retrieve data using localStorage  
+- Display all saved habits dynamically  
+- Mark habits as completed or undo completion  
+- Delete individual habits  
+- Clear all habits with a confirmation prompt  
+- Display total habits and completed habits on the homepage  
+- Visual progress tracking using a progress bar  
+- Generate random motivational tips on the about page  
+- Responsive layout for different screen sizes  
 
 ---
 
 ## Technologies Used
-- HTML for semantic structure and content
-- CSS for styling and responsive design
-- JavaScript for interactivity and application logic
-- localStorage for client-side data persistence
-- Git and GitHub for version control and project hosting
+- HTML for semantic structure and content  
+- CSS for styling and responsive design  
+- JavaScript for interactivity and application logic  
+- localStorage for client-side data persistence  
+- Git and GitHub for version control and project hosting  
 
 ---
 
 ## Application Structure
-The application is organized into three main pages:
-
-- index.html: Displays an overview of the application, including total habits, completed habits, and a progress bar.
-- habits.html: Contains the form for adding new habits and the list of all saved habits.
-- about.html: Provides information about the application and includes a dynamic motivational tip feature.
+- **index.html** – Displays overview and progress  
+- **habits.html** – Habit form and list  
+- **about.html** – Project info and tips  
 
 ---
 
